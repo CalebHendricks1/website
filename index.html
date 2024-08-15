@@ -50,6 +50,87 @@
             background-color: #555;
         }
 
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-icon .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .nav-links a {
+                text-align: center;
+                padding: 15px;
+                border-bottom: 1px solid #444;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #444;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+
         .container {
             max-width: 1000px;
             margin: 20px auto;
@@ -112,49 +193,16 @@
             margin: 0 15px;
         }
 
-        /* Media queries for responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            nav a {
-                display: block;
-                padding: 10px;
-            }
-
-            .container {
-                padding: 15px;
-            }
-
-            footer {
-                padding: 20px;
-            }
+        .contact-icons {
+            display: inline-flex;
+            align-items: center;
         }
 
-        @media (max-width: 480px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-            }
-
-            nav a {
-                padding: 10px;
-                text-align: left;
-                border-bottom: 1px solid #444;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            footer {
-                padding: 15px;
-            }
+        .contact-icons img {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -165,18 +213,27 @@
     </header>
 
     <nav>
-        <a href="#profile">Profile</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Work Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#languages">Languages</a>
-        <a href="#contact">Contact</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#profile">Profile</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Work Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#languages">Languages</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
     <div class="container">
         <section id="profile">
             <h2>Profile</h2>
-            <p>Energetic and motivated individual with strong technological and communication skills. Adept at handling pressure and working effectively in fast-paced environments. Eager to learn and contribute in a professional setting. Aspiring network engineering student with a strong foundation in technology and excellent interpersonal skills. Currently graduating from higher education while bringing practical retail experience and a keen eagerness to learn and grow in the IT field. I speak both English and Afrikaans.</p>
+            <p>I am an energetic and motivated individual with exceptional technological and communication skills. I am adept at handling pressure and have experience working effectively in fast-paced environments. I am eager to learn and contribute in a professional setting.</p>
+	<p>I am a network engineering student with a strong foundation in technology. I possess great interpersonal skills from my time in retail and can communicate fluently in both English and Afrikaans</p>
+	<p>I am currently graduating from higher education while bringing practical retail experience and a keen eagerness to learn and grow in the IT field.</p>
         </section>
 
         <section id="education">
@@ -213,9 +270,18 @@
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:calebjhendricks365@gmail.com">calebjhendricks365@gmail.com</a></p>
-            <p>Contact number:+27 74 922 0531</p>
-            <p>Second number:+27 64 160 2331</p>
+            <p class="contact-icons">
+                <img src="email-icon.png" alt="Email Icon">
+                Email: <a href="mailto:calebjhendricks365@gmail.com">calebjhendricks365@gmail.com</a>
+            </p>
+            <p class="contact-icons">
+                <img src="phone-icon.png" alt="Phone Icon">
+                Contact number: +27 74 922 0531
+            </p>
+            <p class="contact-icons">
+                <img src="phone-icon.png" alt="Phone Icon">
+                Second number: +27 64 160 2331
+            </p>
         </section>
     </div>
 
@@ -228,12 +294,18 @@
         </div>
         <p>&copy; 2024 Caleb Hendricks. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>
 
-     
-           
+  
 
         
         
