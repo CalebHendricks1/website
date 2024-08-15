@@ -24,7 +24,7 @@
 
         h1 {
             font-family: 'Merriweather', serif;
-            font-size: 42px;
+            font-size: 3rem;
             margin: 0;
         }
 
@@ -68,7 +68,8 @@
             padding-bottom: 10px;
         }
 
-        p, li {
+        p,
+        li {
             color: #555;
             line-height: 1.8;
         }
@@ -111,18 +112,48 @@
             margin: 0 15px;
         }
 
+        /* Media queries for responsiveness */
         @media (max-width: 768px) {
             h1 {
-                font-size: 32px;
+                font-size: 2rem;
             }
 
             h2 {
-                font-size: 28px;
+                font-size: 1.5rem;
             }
 
             nav a {
                 display: block;
                 padding: 10px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #444;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            footer {
+                padding: 15px;
             }
         }
     </style>
@@ -145,7 +176,7 @@
     <div class="container">
         <section id="profile">
             <h2>Profile</h2>
-            <p>Energetic and motivated individual with strong technological and communication skills. Adept at handling pressure and working effectively in fast-paced environments. Eager to learn and contribute in a professional setting. Aspiring network engineering student with a strong foundation in technology and excellent interpersonal skills. Currently graduating from higher education while bringing practical retail experience and a keen eagerness to learn and grow in the IT field.</p>
+            <p>Energetic and motivated individual with strong technological and communication skills...</p>
         </section>
 
         <section id="education">
@@ -202,7 +233,6 @@
             <a href="https://www.linkedin.com/in/caleb-hendricks-4a580a316/" target="_blank">
                 <img src="linkedin-logo.png" alt="LinkedIn">
             </a>
-            <!-- Add other social media icons if needed -->
         </div>
         <p>&copy; 2024 Caleb Hendricks. All rights reserved.</p>
     </footer>
@@ -210,3 +240,13 @@
 
 </html>
 
+     
+           
+
+        
+        
+
+
+         
+
+  
